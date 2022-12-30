@@ -1,0 +1,44 @@
+#root {
+
+  text-align: center;
+}
+
+/* navbar */
+.navigationbar{
+  background: 	#B87333;
+  height: 70px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.navigationLinksCarrier{
+  margin: 0 50px;
+}
+.navigationLink{ 
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navigationLink:hover{
+  color: white;
+}
+
+#navbarNav{
+  margin: 0 0 0 950px;
+}
+
+.nav-item{
+  margin-left: 50px;
+}
+
+.userAvatar p{
+  margin: 0 5rem 0 0;
+  color: aliceblue;
+  font-size: 1.2rem;
+}
+
+.userAvatar img{
+  border-radius: 50px;
+}
