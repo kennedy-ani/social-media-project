@@ -10,7 +10,7 @@ export const Navbar = () =>{
         await signOut(auth);
     }   
     return <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-success">
+            <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid d-flex">
                     
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,6 +29,15 @@ export const Navbar = () =>{
                                     <Link className="navigationLink" to="/createpost">Create Post</Link>
                                 </li>
                             )}
+
+                            {!user ? 
+                            <li className="nav-item d-none">
+                                <Link className="navigationLink" to="/findfriends">Find Friends</Link>
+                            </li>:
+                            <li className="nav-item">
+                                <Link className="navigationLink" to="/findfriends">Find Friends</Link>
+                            </li>
+                            }
                         </ul>
                     </div>
                     <div className=" userAvatar">

@@ -74,22 +74,24 @@ export const Post = (props: Props) => {
 
     // a boolean to check if user has liked a post in the list of post
     const hasUserLiked = likes?.find((like)=>like.userId === user?.uid);
-    console.log(user);
+    // console.log(user);
     useEffect(()=>{
         getLikes();
     }, [])
 
-    return <div>
-        <div className='title'>
-           <h1>{post.title}</h1>
+    return <div className='container mt-5 mb-5'>
+        <div className="trend-post">
+            <div className='title'>
+            <h1>{post.title}</h1>
+            </div>
+            <div className='body'>
+                <p>{post.description}</p>
+            </div>
+            <div className="footer">
+                <p className='fw-bold'>@{post.userName}</p>
+                <button className='likeButton' onClick={hasUserLiked ? removeLike : addLike}>{hasUserLiked ? <>&#128078;</> : <>&#128077;</>}</button>
+                {likes && <span>{likes?.length}</span>}
+            </div> 
         </div>
-        <div className='body'>
-            <p>{post.description}</p>
-        </div>
-        <div className="footer">
-            <p>@{post.userName}</p>
-            <button onClick={hasUserLiked ? removeLike : addLike}>{hasUserLiked ? <>&#128078;</> : <>&#128077;</>}</button>
-            {likes && <span>{likes?.length}</span>}
-        </div> 
     </div>
 }
