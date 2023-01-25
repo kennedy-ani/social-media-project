@@ -1,6 +1,6 @@
 import { collection, doc, getDocs, query, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { database } from "../../config/firebase";
+import { database, auth } from "../../config/firebase";
 
 export interface Users{
     id: string,
@@ -29,12 +29,39 @@ export const FindFriends = () =>{
             <div className="friend row">
                 {/* image, displayName will be inserted here */}
                {usersList?.map((users)=>(
-                    <div className="d-flex mt-3 col-lg-6">
-                        <img className="userImg" src={users.photoUrl} width="100"alt="" />
-                        <h4 className="user-name">{users.userName}</h4>
-                        <button className="btn-talk-to-friend">Talk to {users.userName}</button>
-                    </div>
                     
+                    <div className="container">
+                        <div className="row ">
+                            {auth.currentUser?.uid === users.userId ?
+                            
+                            <div className="col-lg-6 d-none">
+                                <div className="d-flex ">
+                                    <img className="userImg" src={users.photoUrl} width="100"alt="" />
+                                    <h4 className="user-name">{users.userName}</h4>
+                                </div>
+                                
+                                <div className="d-flex ">
+                                    <button className="btn-talk-to-friend">Message</button>
+                                    <button className="btn-talk-to-friend">Follow</button>
+                                </div>
+
+                            </div>
+                            :
+                            <div className="col-lg-6 mt-5">
+                                <div className="d-flex ">
+                                    <img className="userImg" src={users.photoUrl} width="100"alt="" />
+                                    <h4 className="user-name">{users.userName}</h4>
+                                </div>
+                                
+                                <div className="d-flex ">
+                                    <button className="btn-talk-to-friend">Message</button>
+                                    <button className="btn-talk-to-friend">Follow</button>
+                                </div>
+
+                            </div>
+                        } 
+                        </div>
+                    </div>
                ))}
             </div>
         </div>
