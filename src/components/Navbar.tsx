@@ -2,10 +2,17 @@ import {Link} from "react-router-dom";
 import{auth} from '../config/firebase';
 import {useAuthState} from 'react-firebase-hooks/auth';
 import { signOut } from "firebase/auth";
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import {getDocs, collection, where, doc, query} from 'firebase/firestore';
+import {database} from '../../src/config/firebase';
 import { Button } from 'react-bootstrap';
 import {Modal} from 'react-bootstrap';
+
+export interface Posts {
+    id: string,
+    title: string,
+    description: string
+}
 
 
 export const Navbar = () =>{
@@ -15,12 +22,34 @@ export const Navbar = () =>{
     // profile popUp 
     
     const closePopUp = () => setPopUp(false);
-    const showPopUp = () => setPopUp(true);
+    const [myPosts , setMyPost] = useState<Posts[] | null>(null);
+    const getUserInfo = async () => { //get alll user's post too...
+        
+        const postRef = collection(database, 'posts');
+        const nowUser = auth.currentUser?.uid;
+
+        const getUserquery = query(postRef, where('userId', "==" , nowUser));
+        
+        const result = await getDocs(getUserquery);
+        setMyPost(result.docs.map((doc)=>(
+            {
+                ...doc.data(), id: doc.id
+            }
+        )) as Posts[]);
+        // result.forEach((d)=>{
+        //     console.log(d.id, "=>", d.data());
+        // });
+        setPopUp(true);
+    };
 
 
     const logOut = async () =>{
         await signOut(auth);
     }   
+
+    
+
+    
     return <div>
                 <nav className="navbar navbar-expand-lg navbar-light">
                     <div className="container-fluid d-flex">
@@ -77,7 +106,7 @@ export const Navbar = () =>{
                         <div className=" userAvatar">
                             {user && (
                                 <div className="d-flex align-items-center">
-                                    <div className="d-flex" onClick={showPopUp} style={{cursor: 'pointer'}}>
+                                    <div className="d-flex" onClick={getUserInfo} style={{cursor: 'pointer'}}>
                                         <img src={user?.photoURL || ""} alt="" width="40" height="40" />&nbsp;&nbsp;
                                         <a href="#" className="text-decoration-none"><p>{user?.displayName}</p></a>
                                     </div>
@@ -94,7 +123,7 @@ export const Navbar = () =>{
                     <Modal.Header closeButton>
                     </Modal.Header>
                     <Modal.Body>
-                        <div>
+                        <div className="p-3">
                             <div className="d-flex flex-column align-items-center">
                                 <img src={user?.photoURL || ""} alt="" width="100" className="rounded-circle" />
                                 <Link to={'#'}>Change Photo</Link>
@@ -114,8 +143,16 @@ export const Navbar = () =>{
 
                             <div>
                                 <h2 className="text-center mt-5">My Posts</h2>
-                                <div>
-                                    
+                                <div className=" my-5">
+                                    {/* get post of this user */}
+                                    {myPosts?.map((post)=>(
+                                        < >
+                                            <div className="d-flex flex-column align-items-center my-5">
+                                                <h4 className="text-center">{post.title}</h4>
+                                                <p className="text-center">{post.description}</p>
+                                            </div>
+                                        </>
+                                    ))}
                                 </div>
                             </div>
                         </div>

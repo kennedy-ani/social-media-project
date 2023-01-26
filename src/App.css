@@ -1,9 +1,14 @@
-#root {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+#root {
   text-align: center;
 }
 html{
   scroll-behavior: smooth;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
 }
 
 /* navbar */
@@ -50,6 +55,13 @@ html{
 }
 
 /* forms start */
+
+.goggle-btn{
+  background-color: #06BCC1;
+  color: #fff;
+  outline: none;
+  
+}
 
 .SignInForm, .SignUpForm{
   max-width: 500px;
@@ -122,3 +134,4 @@ html{
   
 }
 /* posts end */
+

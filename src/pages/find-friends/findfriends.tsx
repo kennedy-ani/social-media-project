@@ -1,6 +1,8 @@
 import { collection, doc, getDocs, query, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
+import {Button} from 'react-bootstrap'
 import { database, auth } from "../../config/firebase";
+// import {FollowUser} from '../followUser';
 
 export interface Users{
     id: string,
@@ -41,8 +43,12 @@ export const FindFriends = () =>{
                                 </div>
                                 
                                 <div className="d-flex ">
-                                    <button className="btn-talk-to-friend">Message</button>
-                                    <button className="btn-talk-to-friend">Follow</button>
+                                    <Button className="btn-talk-to-friend" disabled>
+                                        Message 
+                                    </Button>
+                                    <Button className="btn-talk-to-friend" >
+                                        Follow
+                                    </Button>
                                 </div>
 
                             </div>
@@ -54,8 +60,12 @@ export const FindFriends = () =>{
                                 </div>
                                 
                                 <div className="d-flex ">
-                                    <button className="btn-talk-to-friend">Message</button>
-                                    <button className="btn-talk-to-friend">Follow</button>
+                                    <Button className="btn-talk-to-friend" disabled>
+                                        Message 
+                                    </Button>
+                                    <Button className="btn-talk-to-friend" >
+                                        Follow
+                                    </Button>
                                 </div>
 
                             </div>

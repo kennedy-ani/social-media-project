@@ -25,9 +25,12 @@ export const Login = () => {
 
     
     return <div>
-        <div className="signWithGoogle">
-            <p>Sign in with Google To Continue</p>
-            <button onClick={signInWithGoogle}>Sign in with Google</button>
+        <div className="signWithGoogle mt-5">
+            
+            <button onClick={signInWithGoogle} className="goggle-btn text-bold btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png" width="30" alt="" /> 
+                {" "}Sign in with Google
+            </button>
         </div>
 
         {/* sign in form */}
