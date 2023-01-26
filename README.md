@@ -28,6 +28,7 @@ Please ⭐ the repo you like this.
 <br>
 ✅ See Other User's Posts
 
+
 ## Screenshots 📸
 ![Image](./src/assets/screenshots/Screenshot%20(85).png)
 ![Image](./src/assets/screenshots/Screenshot%20(89).png)
@@ -38,5 +39,5 @@ Please ⭐ the repo you like this.
 
 
 ## Author
-Kennedy Ani 
+Kennedy Ani [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/Kennedythe1st.svg?style=social&label=Follow%20%40Kennedythe1st)](https://twitter.com/Kennedythe1st)
 
