@@ -38,6 +38,11 @@ Please ⭐ the repo you like this.
 ![Image](./src/assets/screenshots/Screenshot%20(91).png)
 ![Image](./src/assets/screenshots/Screenshot%20(92).png)
 
+## Libraries
+ Name | Application | 
+| — — — | — — — — — -|
+| [Firestore](https://firebase.google.com/products/firestore?gclid=CjwKCAiA5sieBhBnEiwAR9oh2lyRWl_ILmIXC-teaZAGXVesnTP_7sKmnIW6JZG_myEnxkU6VAVIWBoCt8QQAvD_BwE&gclsrc=aw.ds “FireStore”) | To store users information and perform backend tasks | 
+|  |  | 
 
 
 ## Author
