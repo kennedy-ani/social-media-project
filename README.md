@@ -1,5 +1,5 @@
 # Social Media Project 💬
-[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/bukotsunikki.svg?style=social&label=Follow%20%40bukotsunikki)](https://twitter.com/Kennedythe1st)
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/Kennedythe1st.svg?style=social&label=Follow%20%40bukotsunikki)](https://twitter.com/Kennedythe1st)
 
 
 Social Media Project is an application for basic socialization. An app to share thoughts and ideas.
@@ -18,7 +18,8 @@ Please ⭐ the repo you like this.
 
 # Features 🎉
 
-✅ Rapid SignUp with Gmail Accounts <br>
+✅ Rapid SignUp with Gmail Accounts 
+<br>
 ✅ Create Posts
 ✅ Like Posts
 ✅ View Personal Profile
