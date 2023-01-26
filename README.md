@@ -18,7 +18,7 @@ Please ⭐ the repo you like this.
 
 # Features 🎉
 
-✅ Rapid SignUp with Gmail Accounts
+✅ Rapid SignUp with Gmail Accounts <br>
 ✅ Create Posts
 ✅ Like Posts
 ✅ View Personal Profile
