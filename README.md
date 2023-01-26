@@ -43,9 +43,7 @@ Please ⭐ the repo you like this.
 | ------------- | ------------- |
 | [FireStore](https://firebase.google.com/products/firestore?gclid=CjwKCAiA5sieBhBnEiwAR9oh2lyRWl_ILmIXC-teaZAGXVesnTP_7sKmnIW6JZG_myEnxkU6VAVIWBoCt8QQAvD_BwE&gclsrc=aw.ds)  | Backend Functionalities and a database to store users and posts  |
 | [Bootstrap](https://react-bootstrap.github.io/getting-started/introduction/)   | For User Interface  |
-
 | [React Router DOM](https://v5.reactrouter.com/web/guides/quick-start) | For Linking the pages  |
-
 | [YUP](https://www.npmjs.com/package/yup) | For form validation  |
 
 
