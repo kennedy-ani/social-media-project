@@ -27,6 +27,8 @@ Please ⭐ the repo you like this.
 ✅ View Personal Profile
 <br>
 ✅ See Other User's Posts
+<br>
+
 
 
 ## Screenshots 📸
@@ -41,3 +43,4 @@ Please ⭐ the repo you like this.
 ## Author
 Kennedy Ani [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/Kennedythe1st.svg?style=social&label=Follow%20%40Kennedythe1st)](https://twitter.com/Kennedythe1st)
 
+I mostly got my ideas from @machadop1407! He's tutorial was really helpful and comprehensive. 
