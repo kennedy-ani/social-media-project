@@ -29,12 +29,13 @@ Please ⭐ the repo you like this.
 ✅ See Other User's Posts
 
 ## Screenshots 📸
+![Image](./src/assets/screenshots/Screenshot%20(85).png)
+![Image](./src/assets/screenshots/Screenshot%20(89).png)
+![Image](./src/assets/screenshots/Screenshot%20(90).png)
+![Image](./src/assets/screenshots/Screenshot%20(91).png)
+![Image](./src/assets/screenshots/Screenshot%20(92).png)
 
-Screenshot (85).png
-Screenshot (89).png
-Screenshot (90).png
-Screenshot (91).png
-Screenshot (92).png
+
 
 ## Author
 Kennedy Ani 
