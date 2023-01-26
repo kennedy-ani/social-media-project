@@ -38,7 +38,7 @@ Please ⭐ the repo you like this.
 ![Image](./src/assets/screenshots/Screenshot%20(91).png)
 ![Image](./src/assets/screenshots/Screenshot%20(92).png)
 
-## Libraries
+## Libraries 📚
 | Name  | Function |
 | ------------- | ------------- |
 | [FireStore](https://firebase.google.com/products/firestore?gclid=CjwKCAiA5sieBhBnEiwAR9oh2lyRWl_ILmIXC-teaZAGXVesnTP_7sKmnIW6JZG_myEnxkU6VAVIWBoCt8QQAvD_BwE&gclsrc=aw.ds)  | Backend Functionalities and a database to store users and posts  |
@@ -47,7 +47,7 @@ Please ⭐ the repo you like this.
 | [YUP](https://www.npmjs.com/package/yup) | For form validation  |
 
 
-## Author
+## Author 🧐
 Kennedy Ani [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/Kennedythe1st.svg?style=social&label=Follow%20%40Kennedythe1st)](https://twitter.com/Kennedythe1st)
 
-I mostly got my ideas from @machadop1407! He's tutorial was really helpful and comprehensive. 
+I mostly got my ideas from @machadop1407 ! He's tutorial was really helpful and comprehensive. 
