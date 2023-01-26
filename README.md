@@ -11,21 +11,24 @@ Click on the link below to check it out😏:
 
 Please ⭐ the repo you like this.
 
-# Requirements 💻
+## Requirements 💻
 
-▪ Little Knowledge of React JS, TypeScript and Firebase
+▪ Little Knowledge of React JS, TypeScript and Firebase <br>
 ▪ Bootstrap for UI development
 
-# Features 🎉
+## Features 🎉
 
 ✅ Rapid SignUp with Gmail Accounts 
 <br>
 ✅ Create Posts
+<br>
 ✅ Like Posts
+<br>
 ✅ View Personal Profile
+<br>
 ✅ See Other User's Posts
 
-# Screenshots 📸
+## Screenshots 📸
 
 Screenshot (85).png
 Screenshot (89).png
@@ -33,6 +36,6 @@ Screenshot (90).png
 Screenshot (91).png
 Screenshot (92).png
 
-# Author
+## Author
 Kennedy Ani 
 
