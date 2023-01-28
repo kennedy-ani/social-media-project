@@ -7,7 +7,7 @@ import {Navbar} from "./components/Navbar";
 import {Createpost} from "./pages/create-posts/Createpost"
 import { FindFriends } from './pages/find-friends/findfriends';
 import { SignUp } from './pages/SignUp';
-import { Notifications } from './pages/notifications/notifications';
+
 
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/createpost' element={<Createpost/>}/>
           <Route path='/findfriends' element={<FindFriends/>}/>
-          <Route path='/notifications' element={<Notifications/>}/>
+    
           <Route path='/signup' element={<SignUp/>}/>
           <Route path='*' element={'PAGE NOT FOUND'}/>
         </Routes>

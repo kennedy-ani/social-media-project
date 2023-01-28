@@ -7,7 +7,7 @@ Social Media Project is an application for basic socialization. An app to share 
 
 Click on the link below to check it out😏:
 
-<!-- link here -->
+https://react-socialmedia-5b90d.web.app/
 
 Please ⭐ the repo you like this.
 
