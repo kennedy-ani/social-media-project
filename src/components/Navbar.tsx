@@ -54,13 +54,14 @@ export const Navbar = () =>{
                 <nav className="navbar navbar-expand-lg navbar-light">
                     <div className="container-fluid d-flex">
                         <div className="nav-brand">
-                            <h1 className="text-light">Socialize</h1>
+                        <Link className="navigationLink" to="/"><h1 className="text-light">Socialize</h1></Link>
+                            
                         </div>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav">
+                        </button> */}
+                        <div className="" id="">
+                            <ul className="navbar-nav" id="navbarIDD">
                                 <li className="nav-item">
                                     <Link className="navigationLink" to="/"><i className="fa-solid fa-house-chimney"></i></Link>
                                 </li>
@@ -105,12 +106,12 @@ export const Navbar = () =>{
                         </div>
                         <div className=" userAvatar">
                             {user && (
-                                <div className="d-flex align-items-center">
+                                <div className="right-side d-flex align-items-center">
                                     <div className="d-flex" onClick={getUserInfo} style={{cursor: 'pointer'}}>
                                         <img src={user?.photoURL || ""} alt="" width="40" height="40" />&nbsp;&nbsp;
-                                        <a href="#" className="text-decoration-none"><p>{user?.displayName}</p></a>
+                                        <a href="#" className="userName text-decoration-none"><p>{user?.displayName}</p></a>
                                     </div>
-                                    <button className="btn btn-transparent rounded" onClick={logOut}><i className="fa-solid fa-right-from-bracket"></i></button>
+                                    <button className="btn text-center btn-transparent rounded" onClick={logOut}><i className="fa-solid  fa-right-from-bracket"></i></button>
                                 </div>
                             )}
                         </div>

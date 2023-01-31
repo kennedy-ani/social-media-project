@@ -43,7 +43,7 @@ export const CreateForm = () =>{
         navigate("/");
     }
 
-    return <div onSubmit={handleSubmit(onCreatePost)}>
+    return <div onSubmit={handleSubmit(onCreatePost)} className="container">
         <form className='post-form'>
             <input className='form-control' placeholder="Title..." {...register("title")}/>
             <p style={{color: 'red'}}>{errors.title?.message}</p>

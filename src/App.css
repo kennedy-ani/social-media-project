@@ -131,7 +131,29 @@ html{
 
 .likeButton:hover{
   background: linear-gradient(to right, #12263A, #06BCC1);
-  
 }
 /* posts end */
 
+@media (max-width:500px){
+  /* body{
+    background: #000;
+
+  } */
+  .fa-house-chimney, .fa-bell, .fa-envelope, .userName{
+    display: none;
+  }
+
+  .navigationLink i{
+    font-size: 13px;
+  }
+
+  .nav-item{
+    text-align: center;
+  }
+
+  #navbarIDD li{
+    margin: 0;    
+    
+  }
+
+}
