@@ -40,7 +40,7 @@ export const CreateForm = () =>{
             userId: user?.uid
         })
         // console.log(data);
-        navigate("/");
+        navigate("/"); 
     }
 
     return <div onSubmit={handleSubmit(onCreatePost)} className="container">
