@@ -40,7 +40,7 @@ export const FindFriends = () =>{
                                 <div className="d-flex ">
                                     <img className="userImg" src={users.photoUrl} width="75"alt="" />
                                     <h4 className="user-name">{users.userName}</h4>
-                                </div>
+                                </div> 
                                 
                                 <div className="d-flex ">
                                     <Button className="btn-talk-to-friend" disabled>
