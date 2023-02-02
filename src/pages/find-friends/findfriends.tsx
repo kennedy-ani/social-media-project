@@ -38,7 +38,7 @@ export const FindFriends = () =>{
                             
                             <div className="col-lg-6 d-none">
                                 <div className="d-flex ">
-                                    <img className="userImg" src={users.photoUrl} width="100"alt="" />
+                                    <img className="userImg" src={users.photoUrl} width="75"alt="" />
                                     <h4 className="user-name">{users.userName}</h4>
                                 </div>
                                 

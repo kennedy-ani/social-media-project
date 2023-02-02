@@ -69,7 +69,7 @@ export const Home = () => {
         getPosts();
     }, []);
     
-    return <div>
+    return <div className='container'>
         {postList?.map((post)=>(
             <Post post={post}/>
         ))}

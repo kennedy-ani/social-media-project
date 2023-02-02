@@ -23,6 +23,12 @@ html{
   align-items: center;
 }
 
+#navbarIDD{
+  list-style: none;
+  display: flex;
+}
+
+
 .navigationLinksCarrier{
   margin: 0 50px;
 }
@@ -142,18 +148,21 @@ html{
   .fa-house-chimney, .fa-bell, .fa-envelope, .userName{
     display: none;
   }
-
+  
   .navigationLink i{
     font-size: 13px;
+    
   }
 
   .nav-item{
     text-align: center;
+    margin: 0 15px;
   }
 
-  #navbarIDD li{
+  #navbarIDD{
     margin: 0;    
-    
+    display: flex;
+    list-style: none;
   }
 
 }

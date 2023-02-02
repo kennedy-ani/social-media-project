@@ -61,7 +61,7 @@ export const Navbar = () =>{
                             <span className="navbar-toggler-icon"></span>
                         </button> */}
                         <div className="" id="">
-                            <ul className="navbar-nav" id="navbarIDD">
+                            <ul className="" id="navbarIDD">
                                 <li className="nav-item">
                                     <Link className="navigationLink" to="/"><i className="fa-solid fa-house-chimney"></i></Link>
                                 </li>
@@ -83,25 +83,7 @@ export const Navbar = () =>{
                                 </li>
                                 }
 
-                                {!user ? 
-                                <li className="nav-item d-none">
-                                    <Link to='/notifications' className="navigationLink"><i className="fa-solid fa-user-group"></i></Link>
-                                </li>
-                                :
-                                <li className="nav-item">
-                                    <Link to='/notifications' className="navigationLink"><i className="fa-solid fa-bell"></i></Link>
-                                </li>
-                                }
-
-                                {!user ? 
-                                <li className="nav-item d-none">
-                                    <Link to='/messaging' className="navigationLink"><i className="fa-solid fa-envelope"></i></Link>
-                                </li>
-                                :
-                                <li className="nav-item">
-                                    <Link to='/messaging' className="navigationLink"><i className="fa-solid fa-envelope"></i></Link>
-                                </li>
-                                }
+                                
                             </ul>
                         </div>
                         <div className=" userAvatar">
