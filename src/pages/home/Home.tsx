@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { Post } from './Post';
 import { getAuth } from 'firebase/auth';
 import { Clients } from '../Clients';
+import { Navbar } from '../../components/Navbar';
 
 export interface Post {
     id: string;
@@ -45,15 +46,9 @@ export const Home = () => {
                     querySnapshot.forEach((doc)=>{
                         console.log(doc.id, "=>", doc.data());
                     })
-                }
-
-                
+                }   
             }
-
-            
-           
         }
-
     }
 
     const [postList, setPostList] = useState<Post[] | null>(null);
@@ -69,9 +64,12 @@ export const Home = () => {
         getPosts();
     }, []);
     
-    return <div className='container'>
+    return <div className=''>
+        <Navbar/>
         {postList?.map((post)=>(
-            <Post post={post}/>
+            <div>
+                <Post post={post}/>
+            </div>
         ))}
     </div>
 };

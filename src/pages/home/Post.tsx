@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth, database } from '../../config/firebase';
 import {Post as IPost} from './Home';
+import {FcLike, FcLikePlaceholder} from 'react-icons/fc';
 
 interface Props{
     post: IPost
@@ -79,18 +80,23 @@ export const Post = (props: Props) => {
         getLikes();
     }, [])
 
-    return <div className='container mt-5 mb-5'>
-        <div className="trend-post">
-            <div className='title'>
-            <h1>{post.title}</h1>
+    return <div className='container'>
+        <div className="bg-grey my-32 rounded-2xl mx-20 py-5">
+            <div className='title py-3 p-6'>
+                <h1 className='font-bold text-2xl'>{post.title}</h1>
             </div>
-            <div className='body'>
+            <div className='body py-3 px-16'>
                 <p>{post.description}</p>
             </div>
-            <div className="footer">
-                <p className='fw-bold'>@{post.userName}</p>
-                <button className='likeButton' onClick={hasUserLiked ? removeLike : addLike}>{hasUserLiked ? <>&#128078;</> : <>&#128077;</>}</button>
-                {likes && <span>{likes?.length}</span>}
+            <div className="footer py-3">
+                <p className='font-bold pb-3'>@{post.userName}</p>
+                <div className=' flex justify-center items-center '>
+                    <div className='items-center'>
+                        <button className='text-xl' onClick={hasUserLiked ? removeLike : addLike}>{hasUserLiked ? <><FcLike /></> : <><FcLikePlaceholder/></>}</button>
+                        {likes && <span className='ml-5'>{likes?.length}</span>}
+                    </div>
+
+                </div>
             </div> 
         </div>
     </div>

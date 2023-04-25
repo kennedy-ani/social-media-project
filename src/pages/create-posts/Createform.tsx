@@ -43,13 +43,18 @@ export const CreateForm = () =>{
         navigate("/");
     }
 
-    return <div onSubmit={handleSubmit(onCreatePost)} className="container">
-        <form className='post-form'>
-            <input className='form-control' placeholder="Title..." {...register("title")}/>
-            <p style={{color: 'red'}}>{errors.title?.message}</p>
-            <textarea className='form-control' placeholder='Whats On Your Mind?' {...register('description')}/>
-            <p style={{color: 'red'}}>{errors.description?.message}</p>
-            <input className='post-btn' type="submit" />
-        </form>
+    return <div onSubmit={handleSubmit(onCreatePost)} className="mt-24 ">
+        <h1 className='font-bold text-center text-2xl my-10'>Write your thoughts</h1>
+        
+        <div className='flex justify-center items-center'>
+            <form className='bg-blue rounded-3xl md:max-w-md p-5'>
+                <input className='bg-grey py-5 rounded-2xl my-5 w-96 px-3 outline-none' placeholder="Title..." {...register("title")}/>
+                <p style={{color: 'red'}}>{errors.title?.message}</p>
+                <textarea className='bg-grey py-5 rounded-2xl my-5 w-96 px-3 outline-none' placeholder='Whats On Your Mind?' {...register('description')}/>
+                <p style={{color: 'red'}}>{errors.description?.message}</p>
+                <input className='bg-yellow text-white mb-10 px-8 py-2 rounded-full' value={'Post'} type="submit" />
+            </form>
+        </div>
+        
     </div>
 }
