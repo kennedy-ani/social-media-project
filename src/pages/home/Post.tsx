@@ -81,7 +81,7 @@ export const Post = (props: Props) => {
     }, [])
 
     return <div className='container'>
-        <div className="bg-grey my-32 rounded-2xl mx-20 py-5">
+        <div className="bg-grey my-32 rounded-2xl max-w-lg mx-auto py-5">
             <div className='title py-3 p-6'>
                 <h1 className='font-bold text-2xl'>{post.title}</h1>
             </div>

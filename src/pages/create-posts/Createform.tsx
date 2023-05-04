@@ -40,7 +40,7 @@ export const CreateForm = () =>{
             userId: user?.uid
         })
         // console.log(data);
-        navigate("/");
+        navigate("/home");
     }
 
     return <div onSubmit={handleSubmit(onCreatePost)} className="mt-24 ">

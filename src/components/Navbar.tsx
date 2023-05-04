@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 import{auth} from '../config/firebase';
 import {useAuthState} from 'react-firebase-hooks/auth';
 import { signOut } from "firebase/auth";
-import { useEffect, useState } from "react";
+import { Children, useEffect, useState } from "react";
 import {getDocs, collection, where, doc, query} from 'firebase/firestore';
 import {AiFillHome} from 'react-icons/ai';
 import {BsPencilSquare} from 'react-icons/bs';
@@ -13,7 +13,7 @@ import {ImSwitch} from 'react-icons/im';
 import { useNavigate } from "react-router-dom";
 import {database} from '../../src/config/firebase';
 import { Button } from 'react-bootstrap';
-import {Modal} from 'react-bootstrap';
+
 
 
 export interface Posts {
@@ -23,13 +23,13 @@ export interface Posts {
 }
 
 
-export const Navbar = () =>{
-    const [popUp , setPopUp] = useState(false);
+export const Navbar: React.FC = () =>{
+    
     const [user] = useAuthState(auth); 
-    const [isOpen, setIsOpen] = useState(false);
     // profile popUp 
     
-    const closePopUp = () => setPopUp(false);
+    
+    const [isOpen, setIsOpen] = useState(false);
     const [myPosts , setMyPost] = useState<Posts[] | null>(null);
      
     const showMenu = () => {
@@ -44,6 +44,8 @@ export const Navbar = () =>{
     }   
 
     
+
+    
     return <div>
                 <nav className="bg-blue py-3">
                     <div className="flex justify-around items-center">
@@ -55,7 +57,7 @@ export const Navbar = () =>{
                         <div className="" id="">
                             <ul className="hidden md:grid grid-cols-3  gap-3">
                                 <li className="mx-3">
-                                    <Link className="text-2xl text-white" to="/"><AiFillHome/></Link>
+                                    <Link className="text-2xl text-white" to="/home"><AiFillHome/></Link>
                                 </li>
                             { !user ? (
                                 <li className="">
@@ -83,10 +85,12 @@ export const Navbar = () =>{
                         <div className="">
                             {user && (
                                 <div className="flex justify-around items-center w-52">
-                                    <div className="md:flex hidden items-center">
-                                        <img className="rounded-full " src={user?.photoURL || ""} alt="" width="40" height="40" />&nbsp;&nbsp;
-                                        <a href="#" className="text-white"><p>{user?.displayName}</p></a>
-                                    </div>
+                                    <Link to="/profile">
+                                        <div className="md:flex hidden items-center" >
+                                            <img className="rounded-full " src={user?.photoURL || ""} alt="" width="40" height="40" />&nbsp;&nbsp;
+                                            <a href="#" className="text-white"><p>{user?.displayName}</p></a>
+                                        </div>
+                                    </Link>
                                     <button className="hidden md:flex text-white" onClick={logOut}><ImExit/></button>
                                 </div>
                             )}
@@ -124,7 +128,10 @@ export const Navbar = () =>{
                     </ul>
                 </div>
                 
+                        
             </div>
+
+            
 
 
 
