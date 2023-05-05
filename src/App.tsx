@@ -4,7 +4,7 @@ import './App.css';
 import {Profile} from './pages/user-profile/Profile'
 import { Home } from './pages/home/Home';
 import {Createpost} from "./pages/create-posts/Createpost"
-import { FindFriends } from './pages/find-friends/findfriends';
+import { FindFriends } from './pages/find-friends/FindFriends';
 import { SignUp } from './pages/SignUp';
 import {Intro} from './pages/intro-page/Intro';
 

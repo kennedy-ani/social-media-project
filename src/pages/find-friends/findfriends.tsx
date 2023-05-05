@@ -14,10 +14,11 @@ export interface Users{
  
 }
 
-export const FindFriends = () =>{
+export const FindFriends = () => {
 
     const [usersList, setUsersList] = useState<Users[] | null>(null);
     const usersRef = collection(database, 'users');
+    const currentUser = auth.currentUser;
     
     const getUsers = async () => {
         const getUserList = await getDocs(usersRef)
@@ -25,30 +26,46 @@ export const FindFriends = () =>{
             ...doc.data(), id:doc.id }))as Users[]);
     }
 
+    // const fetchUsers = async () => {
+    //     const response = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyAaS-vmNfOzL4NvfNR_lqdjy1z3Kj_He7U`);
+    //     const data = await response.json();
+    //     // return data.users;
+    //     setUsersList(data.users);
+    // }
+
+    // const filteringUsers = async () => {
+    //     const users = await fetchUsers();
+    //     const filteredUsers = users.filter((user:any) => user.email !== currentUser?.email);
+    // }
+    
+
+
+
     useEffect(()=>{
         getUsers();
-    }, [])
-    return <div>
-        <div className="">
-            <div className="">
-                <Navbar/>
-                {/* image, displayName will be inserted here */}
-                <div className="mx-20 my-20">
+    },[])
+    
 
-                    <div className="grid md:grid-cols-3 sm:grid-cols-1">
 
-                        {usersList?.map((users)=>(
-                            <div className="">
-                                
-                                        {auth.currentUser?.uid !== users.userId &&
-                                        
+    
+    return (
+
+                <div className="">
+                    <div className="">
+                        <Navbar/>
+                        <div className="mx-20 my-20">
+
+                            <div className="grid md:grid-cols-3 sm:grid-cols-1">
+
+                                {
+                                    usersList?.map((user)=>(
                                         <div className="flex justify-around items-center my-10">
                                             <div className="flex items-center">
-                                                <img className="rounded-full" src={users.photoUrl} width="100"alt="" />
+                                                <img className="rounded-full" src={user.photoUrl} width="100"alt="" />
                                             </div>
                                             
                                             <div className=" flex flex-col">
-                                                <h4 className="font-bold text-2xl">{users.userName}</h4>
+                                                <h4 className="font-bold text-2xl">{user.userName}</h4>
                                                 <div className="flex justify-around items-center mt-5 ">
                                                     <Button className="text-blue text-3xl">
                                                         <BsFillEnvelopeFill/>
@@ -60,12 +77,10 @@ export const FindFriends = () =>{
                                             </div>
 
                                         </div>
-                                    } 
+                                    ))
+                                }
                             </div>
-                        ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-};
+    )};
