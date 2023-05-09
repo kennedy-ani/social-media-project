@@ -5,7 +5,7 @@ import { getAuth, signInWithPopup, User } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 
 
-export const Intro = () => {
+const Intro = () => {
     const navigate = useNavigate();
     const signInWithGoogle = async () => {
         const result = await signInWithPopup(auth, provider);
@@ -19,3 +19,5 @@ export const Intro = () => {
         
     </div>
 }
+
+export default Intro; 

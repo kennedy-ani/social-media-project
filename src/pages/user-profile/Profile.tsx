@@ -12,7 +12,7 @@ interface Post{
     description: string
 }
 
-export const Profile = ()=> {
+const Profile = ()=> {
     const [user] = useAuthState(auth);
 
     // get user's post
@@ -81,3 +81,5 @@ export const Profile = ()=> {
         </div>
     </>
 }
+
+export default Profile;

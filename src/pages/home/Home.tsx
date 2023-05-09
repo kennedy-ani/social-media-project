@@ -14,7 +14,7 @@ export interface Post {
     description: string
 }
 
-export const Home = () => {
+const Home = () => {
     // get the user's info
     const usersRef = collection(database, 'users');
 
@@ -73,3 +73,4 @@ export const Home = () => {
         ))}
     </div>
 };
+export default Home

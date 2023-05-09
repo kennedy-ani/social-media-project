@@ -84,3 +84,5 @@ export const FindFriends = () => {
                     </div>
                 </div>
     )};
+
+    export default FindFriends;

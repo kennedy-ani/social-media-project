@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 
 
-export const SignUp = () => {
+const SignUp = () => {
     return <div>
         <form className='SignUpForm'>
             <h1 className='text-light py-3'>Create Your Account</h1>
@@ -22,3 +22,5 @@ export const SignUp = () => {
         </form>
     </div>
 }
+
+export default SignUp;

@@ -1,6 +1,6 @@
 import { Navbar } from '../../components/Navbar';
 import {CreateForm} from './Createform';
-export const Createpost = () =>{
+ const Createpost = () =>{
     return (
         <div>
             <Navbar/>
@@ -8,3 +8,5 @@ export const Createpost = () =>{
         </div>
     )
 }
+
+export default Createpost
